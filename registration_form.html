@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student registration form 2021</title>
+    <script src="validation.js"></script>
+    <style>
+        table{
+            margin: 0px auto;
+            width: 35%;
+            padding: 30px;
+            font-size: 20px;
+            background-position: center;
+            background-size: cover;
+            background-image: linear-gradient(rgba(4, 44, 56, 0.8),rgba(4, 44, 56, 0.8)),url(student.jpg);
+            border-radius: 4px;
+            color: white;
+            font-family: serif;
+            box-shadow: 0 0 40px 20px rgba(4,44,56,0.26);
+        }
+        input[type=text],select,textarea{
+            width: 100%;
+            padding: 8px 12px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid white;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input[type=submit]{
+            width: 100%;
+            background-color: rgb(3, 5, 8);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type=submit]:hover{
+            background-color: #2F4F4F;
+        }
+        h2{
+            color: black;
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+       <form name="regForm" action="success-reg-form.html" method="POST" onSubmit="return validateForm()"> 
+            <h2>Registration Form</h2>
+            <table>
+<!--            FIRST NAME            -->                
+                <tr>       
+                    <td>   
+                        <lable>First name</lable>
+                    </td>
+                    <td>
+                        <input type="text" id="firstname" name="firstname" placeholder="FIRST NAME"><br>
+                    </td>     
+                </tr>
+<!--            LAST NAME             --> 
+                <tr>
+                    <td>
+                        <lable>Last name</lable>
+                    </td>
+                    <td>
+                        <input type="text" id="lastname" name="lastname" placeholder="LAST NAME"><br>
+                    </td>
+                </tr>
+<!--            DATE OF BIRTH             --> 
+                <tr>
+                    <td>
+                        <label>Date of birth</label>
+                    </td>
+                    <td><input type="date" id="dob" name="dob" placeholder="mm/dd/yyyy">&nbsp;&nbsp;</td>
+                </tr>
+<!--            EMAIL ID                  --> 
+                <tr>
+                    <td>
+                        <label>Email Id</label>
+                    </td>
+                    <td>
+                        <input type="text" id="email" name="email" placeholder="abc@xyz.com">
+                    </td>
+                </tr>
+<!--            PHONE NUMBER               --> 
+                    <td>
+                        <label>Phone number</label>
+                    </td>
+                    <td>
+                        <input type="text" id="phone" name="phone">
+                    </td>
+                </tr>
+<!--            GENDER                      --> 
+                <tr>
+                    <td>
+                        <label>Gender</label>
+                    </td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male">        
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female">       
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="Other">Other</label><br>
+                    </td>
+                </tr>
+<!--            ADDRESS                     --> 
+                <tr>
+                    <td>
+                        <label>Address</label>
+                    </td>
+                    <td>
+                        <textarea id="address" rows="3" cols="50" name="address" placeholder="Address for correspondence"></textarea>
+                    </td>
+                </tr>
+<!--            CITY                      --> 
+                <tr>
+                    <td>
+                        <label>City</label>
+                    </td>
+                    <td>
+                        <input type="text" id="city" name="city">
+                    </td>
+                </tr>
+<!--            PIN CODE                    --> 
+                <tr>
+                    <td>
+                        <label>Pincode</label>
+                    </td>
+                    <td>
+                        <input type="text" name="pin" id="pin">
+                    </td>
+                </tr>
+<!--            STATE                    --> 
+                <tr>
+                    <td>
+                        <lable>State</lable>
+                    </td>
+                    <td>
+                        <input list="state" id="statelist" name="state">
+                    </td>
+                        <datalist id="state">
+                            <option value="Andra Pradesh">
+                            <option value="Arunachal Pradesh">
+                            <option value="Assam">
+                            <option value="Bihar">
+                            <option value="Chattisgarh">
+                            <option value="Goa">
+                            <option value="Gujarat">
+                            <option value="Haryana">
+                            <option value="Himachal Pradesh">
+                            <option value="Jharkhand">
+                            <option value="Karnataka">
+                            <option value="Kerala">
+                            <option value="Madhya Pradesh">
+                            <option value="Maharashtra">
+                            <option value="Manipur">
+                            <option value="Meghalaya">
+                            <option value="Mizoram">
+                            <option value="Nagaland">
+                            <option value="Odisha">
+                            <option value="Punjab">
+                            <option value="Rajasthan">
+                            <option value="Sikkim">
+                            <option value="Tamil Nadu">
+                            <option value="Telangana">
+                            <option value="Tripura">
+                            <option value="Uttarakhand">
+                            <option value="Uttar Pradesh">
+                            <option value="West Bengal">
+                        </datalist>
+                </tr>
+<!--            COUNTRY                      --> 
+                <tr>
+                    <td>
+                        <label>Country</label>
+                    </td>
+                    <td>
+                        <input type="text" id="country" name="country">
+                    </td>
+                </tr>
+<!--            HOBBIES                     --> 
+                <tr>
+                    <td>
+                        <label>Hobbies</label>
+                    </td>
+                    <td>
+                        <textarea id="hobby" name="hobby" rows="2" cols="30"></textarea>
+                    </td>
+                </tr>
+<!--            SUBMIT                       --> 
+                <tr>
+                    <td colspan="2"> 
+                        <input type="submit" name="submit" value="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+</body>
+</html>
